@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/武志/.vim'
+let g:netrw_dirhist_2='/home/武志/cpp'
+let g:netrw_dirhist_3='/home/武志/.vim'
+let g:netrw_dirhist_4='/home/武志/tex_document'
