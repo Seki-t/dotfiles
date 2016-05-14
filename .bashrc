@@ -196,7 +196,8 @@
 # }
 # 
 # alias cd=cd_func
-alias g++='g++ -std=c++11'
+alias g++='g++ -std=c++14'
 alias ls='ls --color=auto'
 alias csc='/cygdrive/c/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe'
-
+export PATH=$PATH:/home/mysh
+export LANG=ja_JP.UTF-8 #motomoto ha LANG=C.UTF-8
