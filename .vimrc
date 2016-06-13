@@ -3,8 +3,6 @@ set nocompatible
 
 "backspace_option
 "set backspace = start,eol,indent
-colorscheme desert
-"twilight
 set mouse=a
 set number
 set cursorline
@@ -16,23 +14,42 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-set foldmethod=indent 
-set foldtext=FoldCCtext()
-set foldcolumn=5
 set encoding=utf-8
 set wildmenu
 set hlsearch
 set incsearch
 set listchars=tab:>-,trail:-,eol:$,extends:>,precedes:<,nbsp:.
 set clipboard=unnamed,unnamedplus
-
+set foldmethod=marker
+"set foldtext=FoldCCtext()
+set foldcolumn=2
 set fillchars=vert:\|
-"hi Folded gui=bold term=standout ctermbg=white ctermfg=LightBlue guibg=white guifg=black
-"hi FoldColum gui=bold term=standout ctermbg=LightGray ctermfg=DarkBlue guibg=Grey guifg=DarkBule
+hi Folded gui=bold term=standout ctermbg=white ctermfg=LightBlue guibg=white guifg=black
+hi FoldColum gui=bold term=standout ctermbg=LightGray ctermfg=DarkBlue guibg=Grey guifg=DarkBule
 
 inoremap jj <ESC>
 nnoremap j gj
 nnoremap k gk
+
+" nmap	:write:make
+" imap :write:make
+"
+" nmap	:make run
+" imap :make run
+"
+" let s:quickfixwindow = "close"
+" function! b:openCloseQuickfix()
+" if "open" ==? s:quickfixwindow
+" let s:quickfixwindow = "close"
+" cclose
+" else
+" let s:quickfixwindow = "open"
+" copen
+" endif 
+" endfunction
+"
+" nmap	:call b:openCloseQuickfix()
+" imap :call b:openCloseQuickfix()
 
 syntax on
 
@@ -152,6 +169,8 @@ endif
 NeoBundleLazy 'Shougo/unite.vim.git', {
 \	'autoload' : { 'commands' : ['UniteVim']},
 \ }
+
+"NeoBundle 'ujihisa/unite-colorscheme'
 "
 
 "line indent on
@@ -161,8 +180,6 @@ NeoBundleLazy 'Shougo/unite.vim.git', {
 " \}
 " let g:indentLine_color_term = 111
 " let g:indentLine_char = '|'
-"
-"
 "
 "
 "color indent on 
@@ -176,11 +193,8 @@ NeoBundleLazy 'Shougo/unite.vim.git', {
 " let g:indent_guides_guide_size=1 
 "
 "
-"
 "coment on/off plugin
-"
 NeoBundle 'tomtom/tcomment_vim'
-"
 "
 "
 "vim-latex
@@ -189,12 +203,18 @@ NeoBundleLazy 'vim-latex/vim-latex',{
 \}
 ""
 "
-"
 "折り畳みの変化
 NeoBundle 'LeafCage/foldCC'
-
+"
+"アウトラインプロセッサにしたい
+"tagばー
+"NeoBundle 'majutsushi/tagbar'
+"
+"
 "カラースキーム
-NeoBundle 'vim-scripts/twilight'
+"NeoBundle 'vim-scripts/twilight'
+"NeoBundle 'nanotech/jellybeans.vim'
+
 call neobundle#end()
 filetype plugin indent on
 "NeoBundleCheck
@@ -218,3 +238,16 @@ let g:Tex_BibtexFlavor = 'upbibtex'
 let g:Tex_MakeIndexFlavor = 'upmendex $*.idx'
 let g:Tex_UseEditorSettingInDVIViewer = 1
 let g:Tex_ViewRule_pdf = 'texworks'
+"
+"jellybeans
+let g:jellybeans_overrides = {
+\	'Todo': { 'guifg': '303030', 'guibg': 'f0f000',
+\				'ctermfg': 'Black', 'ctermbg': 'Yellow',
+\				'attr': 'bold' },
+\}
+
+colorscheme desert
+"colorscheme Twilight
+"colorscheme jellybeans
+"tagbar 設定
+"nmap <F8> :TagbarToggle<CR>
