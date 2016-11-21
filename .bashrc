@@ -199,5 +199,10 @@
 alias g++='g++ -std=c++14'
 alias ls='ls --color=auto'
 alias csc='/cygdrive/c/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe'
+alias rm='rm -i'
 export PATH=$PATH:/home/mysh
 export LANG=ja_JP.UTF-8 #motomoto ha LANG=C.UTF-8
+export DISPLAY=:0.0
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
